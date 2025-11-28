@@ -1,5 +1,5 @@
 # Advent Calendar 2025
-Advent Calendar 2025
+[Calendar of Quant Plots](https://quantgirluk.github.io/advent-calendar-2025/)
 
 **If you like this project, please give it a star** ⭐️
 
