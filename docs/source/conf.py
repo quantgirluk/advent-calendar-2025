@@ -19,7 +19,7 @@ html_logo = 'logo.jpg'
 extensions = [
               'myst_parser',
               'sphinx.ext.mathjax',
-            #   'sphinx_gallery.gen_gallery',
+              'sphinx_gallery.gen_gallery',
               ]
 
 source_suffix = {
@@ -33,8 +33,8 @@ templates_path = ['_templates']
 
 sphinx_gallery_conf = {
     'within_subsection_order': "FileNameSortKey",
-    'examples_dirs': ["../../examples", "../../bonus"] ,  # path to your example scripts
-    'gallery_dirs': ['auto_examples', 'auto_bonus'],  # path to where to save gallery generated output
+    'examples_dirs': ["../../plots"] ,  # path to your example scripts
+    'gallery_dirs': ['auto_plots'],  # path to where to save gallery generated output
 }
 
 
