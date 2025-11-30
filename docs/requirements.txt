@@ -1,0 +1,13 @@
+furo
+matplotlib>=3.7.5
+numpy
+scipy
+fanchart
+twopiece
+aleatory
+mpmath~=1.3.0
+sphinx>=6.1.3
+docutils>=0.19
+myst-parser
+sphinx-book-theme
+sphinx-gallery
