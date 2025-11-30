@@ -5,8 +5,6 @@ Calendar of Quant Plots
 ========================
 
 
-   .. epigraph::
-
    "The greatest value of a picture is when it forces us to notice what we never expected to see."
 
    — John W. Tukey, Exploratory Data Analysis (1977)
@@ -17,23 +15,40 @@ I am excited to start a collection of plots and visualizations that explore vari
 financial mathematics.  
 
 Each day leading up to Christmas, I will be sharing a new entry here. Hope you find them insightful and enjoyable!
+
+
+Each day leading up to Christmas, I will be sharing a new entry here. Hope you find them insightful and enjoyable!
+
+.. raw:: html
+
+   <div style="max-width:640px;margin:0 auto;padding:0;">
+
+.. admonition:: Today's Entry
+
+   See today's entry here :doc:`Day 1: Compound Interest Here <day_01_compound_interest>` 🎄.
+
+.. raw:: html
+
+   </div>
+
 You can also explore previous years' Advent Calendars here:
 
 - `2024 - Stochastic Processes <https://quantgirluk.github.io/advent-calendar-2024/>`_
-- `2023 - Distributions <https://quantgirluk.github.io/advent-calendar-2023/>`_
+- `2023 - Probability Distributions <https://quantgirluk.github.io/advent-calendar-2023/>`_
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Advent Calendar
+
+   day_01_compound_interest
 
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Advent Calendar
+   :caption: Galleries and Source Code
 
-
-.. .. toctree::
-..    :maxdepth: 1
-..    :hidden:
-..    :caption: Galleries and Source Code
-
-..    auto_plots/index
+   auto_plots/index
 
 
 .. .. toctree::
