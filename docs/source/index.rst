@@ -25,7 +25,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 1: Compound Interest Here <day_01_compound_interest>` 🎄.
+   See today's entry here :doc:`Day 2: Time Value of Money <day_02_time_value_of_money>` 🎄.
 
 .. raw:: html
 
