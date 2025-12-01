@@ -42,6 +42,7 @@ You can also explore previous years' Advent Calendars here:
    :caption: Advent Calendar
 
    day_01_compound_interest
+   day_02_time_value_of_money
 
 .. toctree::
    :maxdepth: 1
