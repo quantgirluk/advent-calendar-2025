@@ -208,3 +208,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Auto-generated plot images and draft files
+docs/source/auto_plots/*
+docs/source/drafts/*

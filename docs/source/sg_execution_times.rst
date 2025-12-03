@@ -1,0 +1,52 @@
+
+:orphan:
+
+.. _sphx_glr_sg_execution_times:
+
+
+Computation times
+=================
+**00:01.969** total execution time for 6 files **from all galleries**:
+
+.. container::
+
+  .. raw:: html
+
+    <style scoped>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('table.sg-datatable').DataTable({order: [[1, 'desc']]});
+    } );
+    </script>
+
+  .. list-table::
+   :header-rows: 1
+   :class: table table-striped sg-datatable
+
+   * - Example
+     - Time
+     - Mem (MB)
+   * - :ref:`sphx_glr_auto_plots_plot_yield_curve.py` (``../../plots/plot_yield_curve.py``)
+     - 00:01.729
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_yield_curve_shapes.py` (``../../plots/plot_yield_curve_shapes.py``)
+     - 00:00.240
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_compound_effect.py` (``../../plots/plot_compound_effect.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_discret_continuous_compound.py` (``../../plots/plot_discret_continuous_compound.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_e.py` (``../../plots/plot_e.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_tvm.py` (``../../plots/plot_tvm.py``)
+     - 00:00.000
+     - 0.0
