@@ -211,4 +211,4 @@ __marimo__/
 
 # Auto-generated plot images and draft files
 docs/source/auto_plots/*
-docs/source/drafts/*
+docs/drafts/*
