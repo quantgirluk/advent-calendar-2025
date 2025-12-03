@@ -1,5 +1,5 @@
-Day 3: Yield Curve
-==================
+Day 3: Yield Curves
+===================
 
     "Any time the yield curve flattens or inverts, that's really bad news for the banking system."
     
@@ -26,12 +26,12 @@ For this reason, many traders closely watch the yield curve for U.S. Treasury (B
 Historical values for the yield curve can be visualized using a 3D surface plot or a Heatmap, showing how yields have changed over time across different maturities.
 
 .. figure:: images/yield_curve_surface.png
-   :name: yield-curve-surface-fig
+  :name: yield-curve-surface-fig
 
 .. figure:: images/yield_curve_heatmap.png
-   :name: yield-curve-surface-fig
-    
-    Yield curve surface. Source: `Federal Reserve Bank of St. Louis <https://www.stlouisfed.org>`_
+  :name: yield-curve-heatmap-fig
+  
+Yield curve surface. Source: `Federal Reserve Bank of St. Louis <https://www.stlouisfed.org>`_.
 
 For a full interactive version of the plots above, visit my GitHub Repo `Yield-Curves-Visual <https://github.com/quantgirluk/Yield-Curves-Visual>`_.
 
@@ -42,8 +42,8 @@ There are three primary shapes of yield curves: normal (upward sloping), inverte
 .. figure:: auto_plots/images/sphx_glr_plot_yield_curve_shapes_001.png
    :name: yield-curves-fig
 
-   Source: `Federal Reserve Bank of St. Louis <https://www.stlouisfed.org>`_
-
+Source: `Federal Reserve Bank of St. Louis <https://www.stlouisfed.org>`_.
+  
    
 - A **normal yield curve** indicates that longer-term debt instruments have higher yields than short-term ones, 
   reflecting expectations of economic growth and inflation. 

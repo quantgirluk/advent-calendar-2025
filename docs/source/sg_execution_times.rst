@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:01.969** total execution time for 6 files **from all galleries**:
+**00:01.521** total execution time for 6 files **from all galleries**:
 
 .. container::
 
@@ -33,10 +33,7 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_plots_plot_yield_curve.py` (``../../plots/plot_yield_curve.py``)
-     - 00:01.729
-     - 0.0
-   * - :ref:`sphx_glr_auto_plots_plot_yield_curve_shapes.py` (``../../plots/plot_yield_curve_shapes.py``)
-     - 00:00.240
+     - 00:01.521
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_compound_effect.py` (``../../plots/plot_compound_effect.py``)
      - 00:00.000
@@ -48,5 +45,8 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_tvm.py` (``../../plots/plot_tvm.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_yield_curve_shapes.py` (``../../plots/plot_yield_curve_shapes.py``)
      - 00:00.000
      - 0.0

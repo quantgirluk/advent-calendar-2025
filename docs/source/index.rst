@@ -16,9 +16,6 @@ financial mathematics.
 
 Each day leading up to Christmas, I will be sharing a new entry here. Hope you find them insightful and enjoyable!
 
-
-Each day leading up to Christmas, I will be sharing a new entry here. Hope you find them insightful and enjoyable!
-
 .. raw:: html
 
    <div style="max-width:640px;margin:0 auto;padding:0;">

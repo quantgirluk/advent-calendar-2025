@@ -55,11 +55,10 @@ df_yield = pd.concat(df_all, ignore_index=True)
 
 fig, ax = plt.subplots(figsize=(12, 7), dpi=150)
 for case_name, group in df_yield.groupby('case'):
-    ax.plot(group['tenor_years'], group['yield'], marker='o', 
-            label=f"{case_name.capitalize()}: {group['date'].iloc[0]} ", linewidth=2, color="red") 
-ax.set_xlabel("Tenor (Years)")
+    ax.plot(group['tenor_years'], group['yield'], marker='o', linewidth=2, color="red") 
+ax.set_xlabel("Tenor (in Years)")
 ax.set_ylabel("Yield ($\\%$)")
-ax.set_title("U.S. Treasuries Yield ($\\%$)")
+ax.set_title("U.S. Treasuries Yield Curve - November 30, 2025")
 ax.legend()
 ax.grid(alpha=0.3)
 plt.show()
