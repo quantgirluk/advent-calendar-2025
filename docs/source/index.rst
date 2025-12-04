@@ -22,7 +22,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 3: Yield Curves <day_03_yield_curves>` 🎄.
+   See today's entry here :doc:`Day 4: Probability Distributions in Finance <day_04_random_variables>` 🎄.
 
 .. raw:: html
 
@@ -41,6 +41,7 @@ You can also explore previous years' Advent Calendars here:
    day_01_compound_interest
    day_02_time_value_of_money
    day_03_yield_curves
+   day_04_random_variables
 
 .. toctree::
    :maxdepth: 1
