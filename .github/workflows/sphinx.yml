@@ -19,7 +19,7 @@ jobs:
           pip install sphinx-mathjax-offline
           pip install sphinx_book_theme
           pip install sphinx-gallery
-          pip install matplotlib numpy aleatory
+          pip install matplotlib numpy aleatory yfinance
       - name: Sphinx build
         run: |
           sphinx-build -M html docs/source/ docs/build/
