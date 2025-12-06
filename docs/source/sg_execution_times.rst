@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:11.012** total execution time for 11 files **from all galleries**:
+**00:04.523** total execution time for 13 files **from all galleries**:
 
 .. container::
 
@@ -32,20 +32,8 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_plots_plot_distribution_normal.py` (``../../plots/plot_distribution_normal.py``)
-     - 00:04.832
-     - 0.0
-   * - :ref:`sphx_glr_auto_plots_plot_distribution_chi.py` (``../../plots/plot_distribution_chi.py``)
-     - 00:04.333
-     - 0.0
-   * - :ref:`sphx_glr_auto_plots_plot_distribution_lognormal.py` (``../../plots/plot_distribution_lognormal.py``)
-     - 00:00.986
-     - 0.0
-   * - :ref:`sphx_glr_auto_plots_plot_distribution_exponential.py` (``../../plots/plot_distribution_exponential.py``)
-     - 00:00.537
-     - 0.0
-   * - :ref:`sphx_glr_auto_plots_plot_distribution_tstudent.py` (``../../plots/plot_distribution_tstudent.py``)
-     - 00:00.324
+   * - :ref:`sphx_glr_auto_plots_plot_black_monday.py` (``../../plots/plot_black_monday.py``)
+     - 00:04.523
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_compound_effect.py` (``../../plots/plot_compound_effect.py``)
      - 00:00.000
@@ -53,7 +41,25 @@ Computation times
    * - :ref:`sphx_glr_auto_plots_plot_discret_continuous_compound.py` (``../../plots/plot_discret_continuous_compound.py``)
      - 00:00.000
      - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_distribution_chi.py` (``../../plots/plot_distribution_chi.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_distribution_exponential.py` (``../../plots/plot_distribution_exponential.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_distribution_lognormal.py` (``../../plots/plot_distribution_lognormal.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_distribution_normal.py` (``../../plots/plot_distribution_normal.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_distribution_tstudent.py` (``../../plots/plot_distribution_tstudent.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_e.py` (``../../plots/plot_e.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_returns.py` (``../../plots/plot_returns.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_tvm.py` (``../../plots/plot_tvm.py``)

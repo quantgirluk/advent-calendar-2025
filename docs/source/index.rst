@@ -42,6 +42,7 @@ You can also explore previous years' Advent Calendars here:
    day_02_time_value_of_money
    day_03_yield_curves
    day_04_random_variables
+   day_05_returns
 
 .. toctree::
    :maxdepth: 1
