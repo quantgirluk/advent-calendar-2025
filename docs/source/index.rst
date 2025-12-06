@@ -22,7 +22,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 4: Probability Distributions in Finance <day_04_random_variables>` 🎄.
+   See today's entry here :doc:`Day 5: Returns <day_05_returns>` 🎄.
 
 .. raw:: html
 
