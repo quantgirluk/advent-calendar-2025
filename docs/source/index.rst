@@ -22,7 +22,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 6: Black Monday <day_06_black_monday>` 🎄.
+   See today's entry here :doc:`Day 7: Moving Averages <day_07_moving_averages>` 🎄.
 
 .. raw:: html
 
@@ -44,6 +44,7 @@ You can also explore previous years' Advent Calendars here:
    day_04_random_variables
    day_05_returns
    day_06_black_monday
+   day_07_moving_averages
 
 .. toctree::
    :maxdepth: 1

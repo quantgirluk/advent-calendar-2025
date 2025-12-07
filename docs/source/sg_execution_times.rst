@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:03.739** total execution time for 13 files **from all galleries**:
+**00:04.140** total execution time for 14 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,11 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
+   * - :ref:`sphx_glr_auto_plots_plot_moving_averages.py` (``../../plots/plot_moving_averages.py``)
+     - 00:04.140
+     - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_black_monday.py` (``../../plots/plot_black_monday.py``)
-     - 00:03.739
+     - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_compound_effect.py` (``../../plots/plot_compound_effect.py``)
      - 00:00.000
