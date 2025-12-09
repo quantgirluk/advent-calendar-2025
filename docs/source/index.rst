@@ -22,7 +22,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 8: Normality Testing <day_08_normality_testing>` 🎄.
+   See today's entry here :doc:`Day 9: Exponential Decay <day_09_exponential_decay>` 🎄.
 
 .. raw:: html
 
@@ -46,6 +46,7 @@ You can also explore previous years' Advent Calendars here:
    day_06_black_monday
    day_07_moving_averages
    day_08_normality_testing
+   day_09_exponential_decay
 
 .. toctree::
    :maxdepth: 1
