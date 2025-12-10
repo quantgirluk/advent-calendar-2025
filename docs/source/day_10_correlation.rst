@@ -11,7 +11,6 @@ Correlation is a statistical measure that describes the strength and direction o
 It quantifies how changes in one variable are associated with changes in another variable.
 
 .. figure:: images/correlation_examples.png
-   :height: 300px
    :name: correlation-examples-fig
 
    Source: `Wikipedia <https://en.wikipedia.org/wiki/Correlation_and_dependence>`_.
