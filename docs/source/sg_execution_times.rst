@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:03.164** total execution time for 16 files **from all galleries**:
+**00:02.257** total execution time for 18 files **from all galleries**:
 
 .. container::
 
@@ -32,13 +32,16 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_plots_plot_exponential_decay.py` (``../../plots/plot_exponential_decay.py``)
-     - 00:03.164
+   * - :ref:`sphx_glr_auto_plots_plot_correlation.py` (``../../plots/plot_correlation.py``)
+     - 00:02.257
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_black_monday.py` (``../../plots/plot_black_monday.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_compound_effect.py` (``../../plots/plot_compound_effect.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_correlation_multiple_pairs.py` (``../../plots/plot_correlation_multiple_pairs.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_discret_continuous_compound.py` (``../../plots/plot_discret_continuous_compound.py``)
@@ -60,6 +63,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_e.py` (``../../plots/plot_e.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_exponential_decay.py` (``../../plots/plot_exponential_decay.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_moving_averages.py` (``../../plots/plot_moving_averages.py``)
