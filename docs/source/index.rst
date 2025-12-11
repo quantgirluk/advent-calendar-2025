@@ -22,7 +22,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 10: Correlation <day_10_correlation>` 🎄.
+   See today's entry here :doc:`Day 11: Normal Sampling <day_11_normal_sampling>` 🎄.
 
 .. raw:: html
 
@@ -48,6 +48,7 @@ You can also explore previous years' Advent Calendars here:
    day_08_normality_testing
    day_09_exponential_decay
    day_10_correlation
+   day_11_normal_sampling
 
 .. toctree::
    :maxdepth: 1
