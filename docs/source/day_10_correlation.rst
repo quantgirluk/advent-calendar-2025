@@ -10,7 +10,7 @@ Day 10: Correlation
 Correlation is a statistical measure that describes the strength and direction of a relationship between two variables. 
 It quantifies how changes in one variable are associated with changes in another variable.
 
-.. figure:: images/correlation_examples.png
+.. figure:: images/correlation_shapes.png
    :name: correlation-examples-fig
 
    Source: `Wikipedia <https://en.wikipedia.org/wiki/Correlation_and_dependence>`_.
