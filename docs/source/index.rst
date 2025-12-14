@@ -22,7 +22,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 13: Markowitz Efficient Frontier <day_13_markowitz_efficient_frontier>` 🎄.
+   See today's entry here :doc:`Day 14: Capital Asset Pricing Model <day_14_capm>` 🎄.
 
 .. raw:: html
 
@@ -51,6 +51,7 @@ You can also explore previous years' Advent Calendars here:
    day_11_normal_sampling
    day_12_sharpe_ratio
    day_13_markowitz_efficient_frontier
+   day_14_capm
 
 .. toctree::
    :maxdepth: 1

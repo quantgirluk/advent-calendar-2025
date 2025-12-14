@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:01.881** total execution time for 20 files **from all galleries**:
+**00:02.078** total execution time for 21 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,8 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_plots_plot_markowitz_efficient_frontier.py` (``../../plots/plot_markowitz_efficient_frontier.py``)
-     - 00:01.881
+   * - :ref:`sphx_glr_auto_plots_plot_capm.py` (``../../plots/plot_capm.py``)
+     - 00:02.078
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_black_monday.py` (``../../plots/plot_black_monday.py``)
      - 00:00.000
@@ -69,6 +69,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_exponential_decay.py` (``../../plots/plot_exponential_decay.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_markowitz_efficient_frontier.py` (``../../plots/plot_markowitz_efficient_frontier.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_moving_averages.py` (``../../plots/plot_moving_averages.py``)
