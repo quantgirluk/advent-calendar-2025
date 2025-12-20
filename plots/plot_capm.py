@@ -19,7 +19,7 @@ plt.style.use(
 
 
 # Asset inputs
-mu = np.array([0.08, 0.020, 0.1, 0.07]) # expected returns
+mu = np.array([0.18, 0.020, 0.1, 0.07]) # expected returns
 variances = np.array([0.20, 0.18, 0.15, 0.19]) # variances
 sdtdevs = np.sqrt(variances)
 n = len(mu)
@@ -46,7 +46,7 @@ for i in range(n_portfolios):
 r_f = 0.04  # risk-free rate
 sharpes = (returns - r_f) / risks
 
-# Tangency portfolio
+# Tangency portfolio (maximum Sharpe ratio)
 idx = np.argmax(sharpes)
 tan_return = returns[idx]
 tan_risk = risks[idx]
@@ -88,12 +88,12 @@ for r in target_returns:
 fig, ax = plt.subplots(figsize=(12, 7), dpi=200)
 plt.scatter(risks, returns, c=sharpes, cmap="coolwarm_r", alpha=0.25)
 plt.colorbar(label="Sharpe Ratio")
-plt.scatter(sdtdevs, mu, marker='o', s=50, color='gray', edgecolor='gray', zorder=5, label="Individual Assets")
+plt.scatter(sdtdevs, mu, marker='o', s=50, color='black', edgecolor='black', zorder=5, label="Individual Assets")
 plt.plot(sml_x, sml_y, linestyle='-', linewidth=2, label="Capital Market Line (CML)", color="lightgreen")
-plt.plot(frontier_risk, target_returns, linewidth=3, linestyle='--', color="steelblue", label="Efficient Frontier")
-plt.scatter(port_risk(w_mvp), port_return(w_mvp), s=150, marker='*', color='red', zorder=5, label="Minimum Variance Portfolio")
-plt.scatter(tan_risk, tan_return, s=150, marker='*', color='magenta', zorder=5, label="Maximum Sharpe Ratio Portfolio")
-plt.scatter(0, r_f, s=100, marker='*', color='black', zorder=5, label="Risk-Free Portfolio")
+plt.plot(frontier_risk, target_returns, linewidth=2, linestyle='--', color="steelblue", label="Efficient Frontier")
+plt.scatter(port_risk(w_mvp), port_return(w_mvp), s=200, marker='*', color='red', zorder=5, label="Minimum Variance Portfolio")
+plt.scatter(tan_risk, tan_return, s=200, marker='*', color='magenta', zorder=5, label="Maximum Sharpe Ratio Portfolio")
+plt.scatter(0, r_f, s=200, marker='*', color='black', zorder=5, label="Risk-Free Portfolio")
 plt.xlabel("Risk (Std Dev)")
 plt.ylabel("Expected Return")
 plt.title("Capital Asset Pricing Model (CAPM)")

@@ -1,16 +1,26 @@
 Day 14 : Capital Asset Pricing Model
 ====================================
 
+    "You never can predict the economy. You can’t predict the stock market. "
+
+    — Peter Lynch, One Up On Wall Street (1989)
 
 
 In finance, the capital asset pricing model (CAPM) is a model used to determine a theoretically 
 appropriate required rate of return of an asset, to make decisions about adding assets to a well-diversified portfolio.
 
+.. figure:: auto_plots/images/sphx_glr_plot_capm_001.png     
+   :alt: CAPM Graph
+   :align: center
+
+   CAPM Graph showing the Capital Market Line (CML), the risk-free portfolio, market portfolio, and individual assets.
 
 Definition
 ----------
+The CAPM is a model for pricing an individual security or portfolio. It describes the relationship between systematic 
+risk and expected return for assets. 
 
-The CAPM formula is defined as:
+The model provides a required or expected rate of return for an asset using the following formula: 
 
 .. math::
 
@@ -18,10 +28,11 @@ The CAPM formula is defined as:
 
 Where:
 
-- :math:`E(R_i)` is the expected return of the capital asset
+- :math:`E(R_i)` is the expected return of the asset or portfolio,
 - :math:`R_f` is the risk-free rate of return,
 - :math:`E(R_m)` is the expected return of the market
-- :math:`\beta_i` (the beta) is the sensitivity of the expected excess asset returns to the expected excess beta of the investment
+- :math:`\beta_i` (the beta) is the sensitivity of the expected excess asset returns 
+  to the expected excess market returns, also known as the systematic risk of the asset.
 
 Moreover,
 
@@ -29,24 +40,33 @@ Moreover,
 - :math:`E(R_i) - R_f` is known as the individual asset's risk premium
 
 
-Note 1: the expected market rate of return is usually estimated by measuring the arithmetic average 
+Note 1: the expected market rate of return :math:`E(R_m)` is usually estimated by measuring the arithmetic average 
 of the historical returns on a market portfolio (e.g. S&P 500).
 
-Note 2: the risk free rate of return used for determining the risk premium is usually the arithmetic 
+Note 2: the risk free rate of return :math:`R_f` used for determining the risk premium is usually the arithmetic 
 average of historical risk free rates of return and not the current risk free rate of return.
 
 
-The CAPM makes several asumptions about investors:
-- Aim to maximize economic utilities (Asset quantities are given and fixed).
-- Are rational and risk-averse.
-- Are broadly diversified across a range of investments.
-- Are price takers, i.e., they cannot influence prices.
-- Can lend and borrow unlimited amounts under the risk free rate of interest.
-- Trade without transaction or taxation costs.
-- Deal with securities that are all highly divisible into small parcels (All assets are perfectly divisible and liquid).
-- Have homogeneous expectations.
-- Have all information available all at the same time.
+The CAPM makes several asumptions about investor behavior and market conditions:
 
+Investor Behavior Assumptions
+
+- Aim to maximize economic utilities (Asset quantities are given and fixed).
+- Rational and Risk-Averse Investors: All investors are rational, 
+  risk-averse. 
+- They only care about an investment's expected return and risk over a single, identical time period.
+- Homogeneous Expectations: All investors have access to the same information and agree on the expected 
+  returns, variances, and covariances of all assets. This leads everyone to agree on the single "optimal" 
+  market portfolio.
+- Price Takers: No single investor's buy or sell decisions are large enough to influence asset prices. 
+
+Market Condition Assumptions
+
+- Frictionless Markets: There are no transaction costs (brokerage fees), taxes, or restrictions on short-selling.
+- Perfect Marketability and Divisibility: All assets are highly liquid (marketable) and can be divided into infinitely small portions, allowing for any portfolio combination.
+- Unlimited Borrowing and Lending: Investors can borrow or lend an unlimited amount of capital at a single, constant risk-free rate of return.
+- Efficient Markets: All available information is quickly and universally distributed and absorbed, meaning asset prices fully reflect all known information at all times.
+- Market Portfolio Includes All Assets: The true "market portfolio" includes all existing risky assets globally, weighted by their market value. 
 
 
 Interpretation
