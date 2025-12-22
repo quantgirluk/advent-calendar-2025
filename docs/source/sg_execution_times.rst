@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:01.909** total execution time for 21 files **from all galleries**:
+**00:17.806** total execution time for 28 files **from all galleries**:
 
 .. container::
 
@@ -32,10 +32,19 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_plots_plot_capm.py` (``../../plots/plot_capm.py``)
-     - 00:01.909
+   * - :ref:`sphx_glr_auto_plots_plot_discretisation_schemes_convergence.py` (``../../plots/plot_discretisation_schemes_convergence.py``)
+     - 00:17.806
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_black_monday.py` (``../../plots/plot_black_monday.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_bm_to_gbm.py` (``../../plots/plot_bm_to_gbm.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_brownian_motion.py` (``../../plots/plot_brownian_motion.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_capm.py` (``../../plots/plot_capm.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_compound_effect.py` (``../../plots/plot_compound_effect.py``)
@@ -48,6 +57,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_discret_continuous_compound.py` (``../../plots/plot_discret_continuous_compound.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_discretisation_schemes.py` (``../../plots/plot_discretisation_schemes.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_distribution_chi.py` (``../../plots/plot_distribution_chi.py``)
@@ -71,6 +83,9 @@ Computation times
    * - :ref:`sphx_glr_auto_plots_plot_exponential_decay.py` (``../../plots/plot_exponential_decay.py``)
      - 00:00.000
      - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_gbm.py` (``../../plots/plot_gbm.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_markowitz_efficient_frontier.py` (``../../plots/plot_markowitz_efficient_frontier.py``)
      - 00:00.000
      - 0.0
@@ -78,6 +93,12 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_normality_testing.py` (``../../plots/plot_normality_testing.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_ou_process.py` (``../../plots/plot_ou_process.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_plots_plot_random_walk.py` (``../../plots/plot_random_walk.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_returns.py` (``../../plots/plot_returns.py``)
