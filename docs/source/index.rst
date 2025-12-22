@@ -52,6 +52,12 @@ You can also explore previous years' Advent Calendars here:
    day_12_sharpe_ratio
    day_13_markowitz_efficient_frontier
    day_14_capm
+   day_15_random_walk
+   day_16_brownian_motion
+   day_17_gbm
+   day_18_martingales
+   day_19_discretisation_schemes
+   day_20_ou_process
 
 .. toctree::
    :maxdepth: 1
