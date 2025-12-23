@@ -22,7 +22,7 @@ Each day leading up to Christmas, I will be sharing a new entry here. Hope you f
 
 .. admonition:: Today's Entry
 
-   See today's entry here :doc:`Day 14: Capital Asset Pricing Model <day_14_capm>` 🎄.
+   See the latest's entry here :doc:`Day 20: Ornstein-Uhlenbeck Process <day_20_ou_process>` 🎄.
 
 .. raw:: html
 
