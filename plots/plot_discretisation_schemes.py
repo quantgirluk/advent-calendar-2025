@@ -20,11 +20,9 @@ qp_style()  # Use quant-pastel-style
 def gbm_exact(S0, mu, sigma, T, N, seed=None):
     if seed is not None:
         np.random.seed(seed)
-
     dt = T / N
     W = np.sqrt(dt) * np.random.randn(N)
     t = np.linspace(0, T, N + 1)
-
     S = np.zeros(N + 1)
     S[0] = S0
 
@@ -86,7 +84,7 @@ S_euler = gbm_euler(S0, mu, sigma, T, N, dW)
 S_milstein = gbm_milstein(S0, mu, sigma, T, N, dW)
 
 
-fig, axs = plt.subplots(1, 3, figsize=(30, 7), sharey=True)
+fig, axs = plt.subplots(3, 1, figsize=(7, 12), layout="constrained")
 
 for N, ax in zip([10, 50, 100], [axs[0], axs[1], axs[2]]):
     t, S_exact = gbm_exact(S0, mu, sigma, T, N, seed=seed)
@@ -99,7 +97,7 @@ for N, ax in zip([10, 50, 100], [axs[0], axs[1], axs[2]]):
     ax.set_xlabel("Time")
     ax.set_ylabel("S(t)")
     ax.legend()
-
+    
 fig.suptitle("Discretisation Schemes for Geometric Brownian Motion")
 plt.show()
 
