@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:17.806** total execution time for 28 files **from all galleries**:
+**00:16.338** total execution time for 28 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,8 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_plots_plot_discretisation_schemes_convergence.py` (``../../plots/plot_discretisation_schemes_convergence.py``)
-     - 00:17.806
+   * - :ref:`sphx_glr_auto_plots_plot_discretisation_schemes.py` (``../../plots/plot_discretisation_schemes.py``)
+     - 00:16.338
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_black_monday.py` (``../../plots/plot_black_monday.py``)
      - 00:00.000
@@ -59,7 +59,7 @@ Computation times
    * - :ref:`sphx_glr_auto_plots_plot_discret_continuous_compound.py` (``../../plots/plot_discret_continuous_compound.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_plots_plot_discretisation_schemes.py` (``../../plots/plot_discretisation_schemes.py``)
+   * - :ref:`sphx_glr_auto_plots_plot_discretisation_schemes_convergence.py` (``../../plots/plot_discretisation_schemes_convergence.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_plots_plot_distribution_chi.py` (``../../plots/plot_distribution_chi.py``)
