@@ -6,9 +6,10 @@ There are two primary discretisation schemes used in numerical simulations of st
 1. Euler-Maruyama Method
 2. Milstein Method
 
-## 1. Euler-Maruyama Method
+Euler-Maruyama
+--------------
 
-The Euler-Maruyama method is a straightforward extension of the Euler method for ordinary differential equations to stochastic differential equations. It is widely used due to its simplicity and ease of implementation.
+This method is a straightforward extension of the Euler method for ordinary differential equations to stochastic differential equations. It is widely used due to its simplicity and ease of implementation.
 
 Given an SDE of the form:
 
@@ -23,7 +24,9 @@ where :math:`a(X_t, t)` is the drift term, :math:`b(X_t, t)` is the diffusion te
 where :math:`\Delta W_t` is a normally distributed random variable with mean 0 and variance :math:`\Delta t`.
 
 
-## 2. Milstein Method
+Milstein 
+--------
+
 The Milstein method is a higher-order discretisation scheme that provides better accuracy than the Euler-Maruyama method, especially for SDEs with non-linear diffusion terms. It includes an additional term that accounts for the derivative of the diffusion coefficient.
 The Milstein discretisation is given by:
 
