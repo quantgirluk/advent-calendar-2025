@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Day 3: Yield Curves &#8212; Advent Calendar 2025</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=e1a75a79"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'day_03_yield_curves';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Day 4 : Probability Distributions" href="day_04_random_variables.html" />
+    <link rel="prev" title="Day 2: Time Value of Money" href="day_02_time_value_of_money.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Advent Calendar 2025 - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Advent Calendar 2025 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Advent Calendar</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="day_01_compound_interest.html">Day 1: Compound Interest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_02_time_value_of_money.html">Day 2: Time Value of Money</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Day 3: Yield Curves</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_04_random_variables.html">Day 4 : Probability Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_05_returns.html">Day 5 : Returns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_06_black_monday.html">Day 6 : Black Monday</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_07_moving_averages.html">Day 7 : Moving Averages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_08_normality_testing.html">Day 8 : Normality Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_09_exponential_decay.html">Day 9 : Exponential Decay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_10_correlation.html">Day 10: Correlation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_11_normal_sampling.html">Day 11: Normal Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_12_sharpe_ratio.html">Day 12: Sharpe Ratio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_13_markowitz_efficient_frontier.html">Day 13: Markowitz Efficient Frontier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_14_capm.html">Day 14 : Capital Asset Pricing Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_15_random_walk.html">Day 15: Random Walk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_16_brownian_motion.html">Day 16: Brownian Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_17_gbm.html">Day 17: Geometric Brownian Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_18_martingales.html">Day 18: Martingale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_19_discretisation_schemes.html">Day 19: Discretisation Schemes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="day_20_ou_process.html">Day 20: Orstein-Uhlenbeck Process</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Galleries and Source Code</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="auto_plots/index.html">Plots</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_black_monday.html">Black Monday</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_bm_to_gbm.html">GBM via Transformation of BM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_brownian_motion.html">Brownian Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_capm.html">Capital Asset Pricing Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_compound_effect.html">Compound Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_correlation.html">Correlation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_correlation_multiple_pairs.html">Pearson Correlation Multiple Pairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_discret_continuous_compound.html">Compounded Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_discretisation_schemes.html">Discretisation Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_discretisation_schemes_convergence.html">Euler, Milstein Schemes Convergence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_distribution_chi.html">Chi Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_distribution_exponential.html">Exponential Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_distribution_lognormal.html">Log-Normal Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_distribution_normal.html">Normal Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_distribution_tstudent.html">Student-t Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_e.html">Convergence of Compounding to Euler’s Number</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_exponential_decay.html">Exponential Decay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_gbm.html">Geometric Brownian Motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_markowitz_efficient_frontier.html">Markowitz Efficient Frontier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_martingale.html">Martingales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_moving_averages.html">Moving Averages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_normality_testing.html">Normality Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_ou_process.html">Ornstein-Uhlenbeck Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_random_walk.html">Random Walk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_returns.html">Returns and Log-Returns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_sharpe_ratio.html">Sharpe Ratio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_tvm.html">Time Value of Money</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_yield_curve.html">Yied Curve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_plots/plot_yield_curve_shapes.html">Yied Curve Shapes</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/quantgirluk/advent-calendar-2025" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/quantgirluk/advent-calendar-2025/blob/main/day_03_yield_curves.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/day_03_yield_curves.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Day 3: Yield Curves</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shapes">Shapes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-facts">Random Facts</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="day-3-yield-curves">
+<h1>Day 3: Yield Curves<a class="headerlink" href="#day-3-yield-curves" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>“Any time the yield curve flattens or inverts, that’s really bad news for the banking system.”</p>
+<p class="attribution">—Campbell Harvey, Economist</p>
+</div></blockquote>
+<p>In finance, the yield curve is a graph which depicts how the yields on debt instruments – such as bonds – vary as a function of their years remaining to maturity.</p>
+<p>The yield curve shows how much it costs the federal government to borrow money for a given amount of time, revealing the relationship between long- and short-term interest rates.</p>
+<figure class="align-default" id="yield-curve-latest-fig">
+<img alt="_images/sphx_glr_plot_yield_curve_001.png" src="_images/sphx_glr_plot_yield_curve_001.png" />
+<figcaption>
+<p><span class="caption-text">Source: <a class="reference external" href="https://www.stlouisfed.org">Federal Reserve Bank of St. Louis</a></span><a class="headerlink" href="#yield-curve-latest-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Ronald Melicher and Merle Welshans have identified several characteristics of a properly constructed yield curve.</p>
+<ul class="simple">
+<li><p>It should be based on a set of securities which have differing lengths of time to maturity,</p></li>
+<li><p>All yields should be calculated as of the same point in time,</p></li>
+<li><p>All securities measured in the yield curve should have similar credit ratings, to screen out the effect of yield differentials caused by credit risk.</p></li>
+</ul>
+<p>For this reason, many traders closely watch the yield curve for U.S. Treasury (Bank of England in the UK) debt securities, which are considered to be risk-free.</p>
+<p>Historical values for the yield curve can be visualized using a 3D surface plot or a Heatmap, showing how yields have changed over time across different maturities.</p>
+<figure class="align-default" id="yield-curve-surface-fig">
+<img alt="_images/yield_curve_surface.png" src="_images/yield_curve_surface.png" />
+</figure>
+<figure class="align-default" id="yield-curve-heatmap-fig">
+<img alt="_images/yield_curve_heatmap.png" src="_images/yield_curve_heatmap.png" />
+</figure>
+<p>Yield curve surface. Source: <a class="reference external" href="https://www.stlouisfed.org">Federal Reserve Bank of St. Louis</a>.</p>
+<p>For a full interactive version of the plots above, visit my GitHub Repo <a class="reference external" href="https://github.com/quantgirluk/Yield-Curves-Visual">Yield-Curves-Visual</a>.</p>
+<section id="shapes">
+<h2>Shapes<a class="headerlink" href="#shapes" title="Link to this heading">#</a></h2>
+<p>There are three primary shapes of yield curves: normal (upward sloping), inverted (downward sloping), and flat.</p>
+<figure class="align-default" id="yield-curves-fig">
+<img alt="_images/sphx_glr_plot_yield_curve_shapes_001.png" src="_images/sphx_glr_plot_yield_curve_shapes_001.png" />
+</figure>
+<p>Source: <a class="reference external" href="https://www.stlouisfed.org">Federal Reserve Bank of St. Louis</a>.</p>
+<ul class="simple">
+<li><p>A <strong>normal yield curve</strong> indicates that longer-term debt instruments have higher yields than short-term ones,
+reflecting expectations of economic growth and inflation.</p></li>
+<li><p>An <strong>inverted yield curve</strong> is observed when short-term yields exceed long-term yields. This scenario is often seen as a predictor of economic recession.
+It implies that the market believes inflation will remain low. This is because, even if there is a recession, a low bond yield will still be offset by low inflation.</p></li>
+<li><p>A <strong>flat</strong> yield curve is observed when all maturities have similar yields, whereas a humped curve results when short-term and long-term yields are equal and medium-term yields are higher than those of the short-term and long-term. A flat curve sends signals of uncertainty in the economy.
+This mixed signal can revert to a normal curve or could later result into an inverted curve.</p></li>
+</ul>
+</section>
+<section id="random-facts">
+<h2>Random Facts<a class="headerlink" href="#random-facts" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The yield has its origins after August 15, 1971, when US President Richard Nixon ended the dollar’s link to gold
+and brought in <strong>floating exchange rates</strong>. Interest rates became more volatile, and bond traders (particulary at Salomon
+Brothers under the encouragement of Marty Liebowitz) began plotting yields across maturities as a single curve rather
+than treating each bond as its own market. This is where the familiar language of the short end and long end took hold!</p></li>
+<li><p>Academics tried to formalise what practicioners were already doing. In 1977, <a class="reference external" href="https://en.wikipedia.org/wiki/Oldřich_Vašíček">Vasicek</a> introduced one of
+the first mathematical models of the term structure, showing how movements in the short rate can drive
+bond prices across the curve. His model was followed by many others such as Hull-White, Cox-Ingersoll-Ross (CIR),
+and ultimately by the Heath-Jarrow-Morton (HJM) framework, which directly models the entire forward-rate curve.</p></li>
+<li><p>An inverted yield curve is often interpreted as an indicator of recession. Work by Arturo Estrella and
+Tobias Adrian has established the predictive power of an inverted yield curve to signal a recession. Their
+models show that when the difference between short-term interest rates (they use 3-month T-bills) and long-term interest rates (10-year Treasury bonds) at
+the end of a federal reserve tightening cycle is negative or less than 93 basis points positive, a rise in
+unemployment usually occurs.</p></li>
+</ul>
+<figure class="align-default" id="yield-curve-spread-fig">
+<img alt="_images/yield_curve_spread.png" src="_images/yield_curve_spread.png" />
+<figcaption>
+<p><span class="caption-text">Inflation impact on purcharsing power. Source: <a class="reference external" href="https://www.bankofengland.co.uk/monetary-policy/inflation/inflation-calculator">BoE Inflation Calculator</a>.</span><a class="headerlink" href="#yield-curve-spread-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>The New York Fed publishes a monthly recession probability prediction derived
+from the yield curve and based on Estrella’s work. You can find it <a class="reference external" href="https://www.newyorkfed.org/research/capital_markets/ycfaq.html#/overview">here</a>.</p></li>
+<li><p>Yield curves are built from either prices available in the bond market or the money market.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="day_02_time_value_of_money.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Day 2: Time Value of Money</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="day_04_random_variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Day 4 : Probability Distributions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shapes">Shapes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-facts">Random Facts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dialid Santiago
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Dialid Santiago.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
